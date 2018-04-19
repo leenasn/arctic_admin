@@ -11,21 +11,22 @@ $(function() {
     var width = $(this).width();
     if (e.pageX < position.left) {
       if ($(this).css('right') == '0px') {
-        $(this).css('position', 'fixed');
+        // $(this).css('position', 'fixed');
         $(this).animate({
           right: "-="+width
         }, 600, function() {
-          $(this).removeAttr('style');
+          // $(this).removeAttr('style');
           animationFilterDone = true;
         });
       } else {
         $(this).animate({
           right: "+="+width
         }, 600, function() {
-          $(this).css('position', 'absolute');
+          // $(this).css('position', 'absolute');
           animationFilterDone = true;
         });
       }
+      // $(this).css("top", $("#active_admin_content").offset().top - 30);
     }
   });
 
