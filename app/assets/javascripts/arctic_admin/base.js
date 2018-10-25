@@ -10,7 +10,7 @@ $(function() {
     if($(e.target).attr('id') == $(e.currentTarget).attr('id')){
       var position = $(this).position();
       var width = $(this).width();
-      if (e.pageX < position.left || e.pageX == undefined) {
+      if (e.pageX < position.left) {
         if ($(this).css('right') == '0px') {
           $(this).animate({
             right: "-="+width
