@@ -59,6 +59,10 @@
           color: $text-color;
         }
       }
+      
+      &:hover ul {
+        display: block;
+      }
 
       ul {
         border-top: 1px solid $sidebar-border-color;

@@ -5,6 +5,10 @@
 
 .input {
   margin-bottom: 20px;
+
+  &.hidden {
+    margin: 0;
+  }
 }
 
 #active_admin_content {
@@ -23,15 +27,20 @@
     }
 
     .error {
-      input, select {
-        border-color: $error;
+      input, select, textarea {
+        @include input-invalid();
       }
     }
 
-    input, select {
+    input:not([disabled]):not([type="submit"]), select, textarea {
       &.error {
-        border-color: $error; 
+        @include input-invalid();
       }
+    }
+    
+    .inline-hints {
+      margin: 5px 0 20px 25%;
+      font-size: 14px;
     }
 
     .inline-errors, label.error {
